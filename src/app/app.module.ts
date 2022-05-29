@@ -3,13 +3,20 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PoolCreateComponent } from './pool-create/pool-create.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PoolComponent } from './pool/pool.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PoolCreateComponent,
+    PoolComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [],
