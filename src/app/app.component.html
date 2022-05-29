@@ -1,18 +1,24 @@
 <nav class="navbar navbar-dark bg-info">
-    <a class="navbar-brand mr-auto" href="#">Bloockcahin pools</a>
-    <button type="button" class="btn btn-success" (click)="showForm=!showForm"> create Poll </button>
+  <a class="navbar-brand mr-auto" href="#">Bloockcahin pools</a>
+  <button type="button" class="btn btn-success" (click)="showForm = !showForm">
+    create Poll
+  </button>
 </nav>
 <section class="jumpotron bg-light text-center">
-    <h1>Pool Rethinked</h1>
-    <p class="lead text-muted">By Pradeep</p>
+  <h1>Pool Rethinked</h1>
+  <p class="lead text-muted">By Pradeep</p>
 </section>
 <app-pool-create *ngIf="showForm"></app-pool-create>
 <div class="d-flex">
-<div class="container poll-list">
-    <app-pool></app-pool>
-</div>
-<div class="container poll-detail">
-    Detail
-</div>
+  <div class="container poll-list">
+    <app-pool
+      *ngFor="let poll of polls"
+      [question]="poll.question"
+      [voted]="poll.voted"
+      [votes]="poll.votes"
+      [pollImage]="poll.image"
+    ></app-pool>
+  </div>
+  <div class="container poll-detail">Detail</div>
 </div>
 <router-outlet></router-outlet>
