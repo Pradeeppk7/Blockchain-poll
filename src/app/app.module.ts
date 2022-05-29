@@ -7,6 +7,7 @@ import { PoolCreateComponent } from './pool-create/pool-create.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PoolComponent } from './pool/pool.component';
 import { PollVoteComponent } from './poll-vote/poll-vote.component';
+import { PollService } from './poll.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { PollVoteComponent } from './poll-vote/poll-vote.component';
     ReactiveFormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [PollService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
