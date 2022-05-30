@@ -8,7 +8,7 @@
   <h1>Pool Rethinked</h1>
   <p class="lead text-muted">By Pradeep</p>
 </section>
-<app-pool-create *ngIf="showForm"></app-pool-create>
+<app-pool-create *ngIf="showForm" (pollCreated)="handlePollCreated($event)"></app-pool-create>
 <div class="d-flex">
   <div class="container poll-list">
     <app-pool

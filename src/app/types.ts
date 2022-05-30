@@ -1,10 +1,15 @@
-export interface Poll {
+export interface Poll extends PollForm{
     id: number;
-    question: string;
     results: number[];
-    options: string[];
-    thumbnail: string;
     voted: boolean;
+
+}
+export interface PollForm{
+
+    options: string[];
+    question: string;
+    thumbnail: string;
+    
 }
 
 export interface Voter{
